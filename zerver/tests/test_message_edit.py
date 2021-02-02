@@ -482,8 +482,8 @@ class EditMessageTest(ZulipTestCase):
             i += 1
             self.assertEqual(expected_entries, set(entry.keys()))
         self.assertEqual(len(message_history), 6)
-        self.assertEqual(message_history[0]['prev_topic'], 'topic 3')
         self.assertEqual(message_history[0]['topic'], 'topic 4')
+        self.assertEqual(message_history[0]['prev_topic'], 'topic 3')
         self.assertEqual(message_history[1]['topic'], 'topic 3')
         self.assertEqual(message_history[2]['topic'], 'topic 3')
         self.assertEqual(message_history[2]['prev_topic'], 'topic 2')
